@@ -7,11 +7,6 @@ import regex as re
 from test import chapters
 
 
-TEXT = "Hello World!"
-VOICE = "en-GB-SoniaNeural"
-OUTPUT_FILE = "test.mp3"
-
-
 
 # while True:
 def main(chapter):
