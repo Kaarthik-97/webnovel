@@ -137,7 +137,3 @@ def get_voice(novel, voices):
 
             
 asyncio.run(tts())
-
-
-
-
