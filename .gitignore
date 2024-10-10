@@ -2101,3 +2101,4 @@ SS-Thumbnail
 SS-Video
 output_file
 env
+__pycache__
