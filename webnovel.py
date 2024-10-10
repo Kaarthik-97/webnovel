@@ -67,9 +67,12 @@ async def tts() -> None:
                 text += f"{text_chapter}    ."
             else:
                 text += f".   {text_chapter}   ."
-            text += main(chapter)
-        
-        print(text)
+            text1 = main(chapter)
+            text += text1
+            if text1 == "done":
+                print(text1, chapter)
+                break
+        # print(text)
 
         if text == "done":
             pass
