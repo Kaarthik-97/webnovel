@@ -4,14 +4,14 @@ import edge_tts
 import os
 import asyncio
 import regex as re
+import patch
 import ss
-import ki
 
 #keyboard immortal
-chapters = ki.chapters
-novel = "KI"
-# url = f"https://novelbin.com/b/shadow-slave/"
-base_url = f"https://novelbin.com/b/keyboard-immortal-novel/"
+chapters = ss.chapters
+novel = "SS"
+base_url = f"https://novelbin.com/b/shadow-slave/"
+# base_url = f"https://novelbin.com/b/keyboard-immortal-novel/"
 location = novel.lower()
 
 chapters_lot = {
@@ -102,9 +102,9 @@ async def tts() -> None:
 
 
             if text == "":
-                text += f"{text_chapter}    ."
+                text += f"{text_chapter}.     "
             else:
-                text += f".   {text_chapter}   ."
+                text += f".   {text_chapter}.     "
 
 
             text1 = main(chapter)
