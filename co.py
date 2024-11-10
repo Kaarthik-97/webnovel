@@ -23,7 +23,7 @@ chapters_lot = {
 voice_list = {
     "KI":"Microsoft Andrew Online (Natural) - English (United States)",
     "SS":"Microsoft Steffan Online (Natural) - English (United States)",
-    "CO":"Microsoft Christopher Online (Natural) - English (United States)"
+    "CO":"Microsoft AndrewMultilingual Online (Natural) - English (United States)"
 }
 
 
@@ -49,6 +49,10 @@ def main(chapter):
         text = soup.find_all("p")
         for paragraph in text:
             paragraph = paragraph.get_text()
+            if "visit" in paragraph.lower() and "com" in paragraph.replace("/",""):
+                continue
+            if "[.]com" in  paragraph:
+                continue
             if paragraph == " Translator: Pika\n":
                 continue
             if "1." in paragraph:
@@ -120,7 +124,7 @@ async def tts() -> None:
         if text == "done":
             pass
         else:
-            communicate = edge_tts.Communicate(text, VOICE, pitch = "+5Hz",rate = "+25%")
+            communicate = edge_tts.Communicate(text, VOICE, pitch = "+5Hz",rate = "+5%")
             await communicate.save(OUTPUT_FILE)
 
 
