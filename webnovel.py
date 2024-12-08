@@ -101,10 +101,10 @@ async def tts() -> None:
                 text_chapter = chapter.replace("-"," ")
 
 
-            if text == "":
-                text += f"{text_chapter}.     "
-            else:
-                text += f".   {text_chapter}.     "
+            # if text == "":
+            #     text += f"{text_chapter}.     "
+            # else:
+            #     text += f".   {text_chapter}.     "
 
 
             text1 = main(chapter)
